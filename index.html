@@ -1,150 +1,260 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          container: {
+            center: true
+          }
+        }
+      }
+    </script>
+    <style>
+      /* div {
+        border: solid 1px;
+      }
+      h3 {
+        border: solid 1px;
+      } */
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+    <title>Привет!!!</title>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">  
-    <title>Bootstrap 5 Landing Page</title>
-</head>
+  <body>
+    <section
+      id="cover"
+      class="flex h-screen w-screen items-center justify-center bg-cover bg-center"
+      style="background-image: url('cover.jpg')"
+    >
+      <div
+        id="bl"
+        class="mx-4 w-full rounded-lg bg-black bg-opacity-50 p-10 text-center text-4xl font-bold text-white shadow-lg md:w-1/3"
+      >
+        <img src="logo.png" class="m-3 mx-auto w-3/4" />
+        <h1 class="text-lg">Школа <br />аргентинского <br />испанского</h1>
+        <h3 class="my-2 text-base font-light">для русскоязычных</h3>
+        <p class="inline-block bg-slate-50 p-4 text-sm font-light text-black">
+          Работаем с 2004 года
+        </p>
+      </div>
+    </section>
 
-<body>
-
-    <section class="cover d-flex align-items-center" style="background-image: url('cover.jpg'); height: 100vh;">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-lg-6 mx-auto text-center bg-dark bg-opacity-75 text-white p-4 rounded">
-                    <img src="logo.png" class="img-fluid mx-auto w-50 mb-4" alt="Esperanto Logo">
-                    <h1>Школа <br>аргентинского<br> испанского</h1>
-                    <p class="bg-primary text-white d-inline-block p-2 bg-opacity-75">для русскоязычных</p>
-                    <p class="nos">Работаем с 2004 года</p>
-                </div>
-            </div>
+    <section id="lead" class="container mx-auto px-4 py-8">
+      <div class="bg-gray-100 py-8">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2
+            class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl"
+          >
+            <span class="block pb-4">¿Хотите выучить испанский?</span>
+            <span class="block text-indigo-600"
+              >¡Запишитесь на наши курсы уже сегодня!</span
+            >
+          </h2>
+          <p class="mt-4 max-w-2xl text-xl text-gray-500">
+            Старейшая школа аргентинского испанского для русскоязычных в
+            Буэнос-Айресе. Ждём вас на наших занятиях.
+          </p>
         </div>
-    </section> 
+      </div>
+    </section>
 
-    <section class="py-5">
-        <div class="container">
-          <div class="row">
-            <h2 class="mb-5">Наши преимущества</h2>
-            <div class="col-md-4 mb-3">
-              <div class="card h-100">
-                <div class="card-body text-center">
-                  <i class="bi bi-people-fill fs-1 mb-3"></i>
-                  <h5 class="card-title">Все возрасты и уровки</h5>
-                  <p class="card-text">Группы для детей, подростков и взрослых. Программы для начинающих и продолжающих. Подготовка к поступлению вузов и получению сертификатов.</p>
-                </div>
-              </div>
+    <section id="advantages" class="container mx-auto px-4 py-8">
+      <h2 class="p-4 text-center text-2xl font-bold">Наши преимущества</h2>
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+        <div class="flex flex-col rounded-lg bg-white p-4 shadow-md">
+          <div class="flex h-16 items-center justify-center">
+            <h3 class="text-center text-lg font-bold">
+              Все возрасты <br />и уровни
+            </h3>
+          </div>
+          <div class="mb-4 flex h-48 items-center justify-center">
+            <img src="il-1.png" alt="Все возрасты уровни" />
+          </div>
+          <p class="text-xs">
+            Группы для детей, подростков и взрослых. Программы для начинающих и
+            продолжающих. Подготовка к поступлению вузов и получению
+            сертификатов.
+          </p>
+        </div>
+
+        <div class="flex flex-col rounded-lg bg-white p-4 shadow-md">
+          <div class="flex h-16 items-center justify-center">
+            <h3 class="text-center text-lg font-bold">Очно <br />и онлайн</h3>
+          </div>
+          <div class="mb-4 flex h-48 items-center justify-center">
+            <img src="il-2.png" alt="Очно и онлайн" />
+          </div>
+          <p class="text-xs">
+            Очные занятия в Буэнос-Айресе и онлайн-группы. Уютные классы в
+            центре города, занятия в удобное время. Мини-группы для детей,
+            подростков и взрослых.
+          </p>
+        </div>
+
+        <div class="flex flex-col rounded-lg bg-white p-4 shadow-md">
+          <div class="flex h-16 items-center justify-center">
+            <h3 class="text-center text-lg font-bold">
+              Профессиональные педагоги
+            </h3>
+          </div>
+          <div class="mb-4 flex h-48 items-center justify-center">
+            <img src="il-3.png" alt="Профессиональные педагоги" />
+          </div>
+          <p class="text-xs">
+            Все наши преподаватели имеют высшее филологическое образование, и в
+            совершенстве владеют испанским и русским языками.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <h2 class="p-4 text-center text-2xl font-bold">Наши классы</h2>
+
+      <div
+        id="carouselExampleCaptions"
+        class="relative"
+        data-te-carousel-init
+        data-te-carousel-slide
+      >
+        <div
+          class="absolute right-0 bottom-0 left-0 z-[2] mx-[15%] mb-4 flex list-none justify-center p-0"
+        >
+          <button
+            type="button"
+            data-te-target="#carouselExampleCaptions"
+            data-te-slide-to="0"
+            data-te-carousel-active
+            class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-te-target="#carouselExampleCaptions"
+            data-te-slide-to="1"
+            class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-te-target="#carouselExampleCaptions"
+            data-te-slide-to="2"
+            class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div
+          class="relative w-full overflow-hidden after:clear-both after:block after:content-['']"
+        >
+          <div
+            class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+            data-te-carousel-active
+            data-te-carousel-item
+            style="backface-visibility: hidden"
+          >
+            <div
+              class="relative overflow-hidden bg-cover bg-no-repeat"
+              style="background-position: 50%"
+            >
+              <img src="foto-1.png" class="block w-full" />
+              <div
+                class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-black bg-fixed opacity-20"
+              ></div>
             </div>
-            <div class="col-md-4 mb-3">
-              <div class="card h-100">
-                <div class="card-body text-center">
-                  <i class="bi bi-laptop-fill fs-1 mb-3"></i>
-                  <h5 class="card-title">Очно и онлайн</h5>
-                  <p class="card-text">Классы в Буэнос-Айресе и онлайн-занятия. Уютные классы в центре города, занятия в удобное время в мини-группах онлайн.</p>
-                </div>
-              </div>
+          </div>
+          <div
+            class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+            data-te-carousel-item
+            style="backface-visibility: hidden"
+          >
+            <div
+              class="relative overflow-hidden bg-cover bg-no-repeat"
+              style="background-position: 50%"
+            >
+              <img src="foto-2.png" class="block w-full" />
+              <div
+                class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-black bg-fixed opacity-20"
+              ></div>
             </div>
-            <div class="col-md-4 mb-3">
-              <div class="card h-100">
-                <div class="card-body text-center">
-                  <i class="bi bi-chat-left-text-fill fs-1 mb-3"></i>
-                  <h5 class="card-title">Профессиональные педагоги</h5>
-                  <p class="card-text">Все наши преподаватели имеют высшее филологическое образование, и в совершенстве владеют испанским и русским языками.</p>
-                </div>
-              </div>
+          </div>
+
+          <div
+            class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+            data-te-carousel-item
+            style="backface-visibility: hidden"
+          >
+            <div
+              class="relative overflow-hidden bg-cover bg-no-repeat"
+              style="background-position: 50%"
+            >
+              <img src="foto-3.png" class="block w-full" />
+              <div
+                class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-black bg-fixed opacity-20"
+              ></div>
             </div>
           </div>
         </div>
-      </section>
-
-
-      <section class="py-5">
-        <div class="container">
-          <h2 class="mb-5">Наши ученики</h2>
-          <div class="row">
-            <div class="col-md-8 mx-auto">
-              <div class="row row-cols-3 g-3">
-                <div class="col">
-                  <a href="https://picsum.photos/id/237/800/800" data-lightbox="gallery">
-                    <img src="https://picsum.photos/id/237/400/400" class="img-fluid rounded">
-                  </a>
-                </div>
-                <div class="col">
-                  <a href="https://picsum.photos/id/238/800/800" data-lightbox="gallery">
-                    <img src="https://picsum.photos/id/238/400/400" class="img-fluid rounded">
-                  </a>
-                </div>
-                <div class="col">
-                  <a href="https://picsum.photos/id/239/800/800" data-lightbox="gallery">
-                    <img src="https://picsum.photos/id/239/400/400" class="img-fluid rounded">
-                  </a>
-                </div>
-                <div class="col">
-                  <a href="https://picsum.photos/id/240/800/800" data-lightbox="gallery">
-                    <img src="https://picsum.photos/id/240/400/400" class="img-fluid rounded">
-                  </a>
-                </div>
-                <div class="col">
-                  <a href="https://picsum.photos/id/241/800/800" data-lightbox="gallery">
-                    <img src="https://picsum.photos/id/241/400/400" class="img-fluid rounded">
-                  </a>
-                </div>
-                <div class="col">
-                  <a href="https://picsum.photos/id/242/800/800" data-lightbox="gallery">
-                    <img src="https://picsum.photos/id/242/400/400" class="img-fluid rounded">
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      
-      <section>
-        <div class="container">
-          <div class="row">
-            <h2 class="mb-5">Контакты</h2>
-            <div class="col-md-6 mx-auto">
-              <form>
-                <div id="form_195696_1"></div>
-                <script type="text/javascript">
-                   (function (d, w, c) {
-                       (w[c] = w[c] || []).push({formId:195696,host:"formdesigner.ru",formHeight:100, el: "form_195696_1",center: 1,scroll: 0});
-                       var s = d.createElement("script"), g = "getElementsByTagName";
-                       s.type = "text/javascript"; s.charset="UTF-8"; s.async = true;
-                       s.src = (d.location.protocol == "https:" ? "https:" : "http:")+"//formdesigner.ru/js/iform.js?v=0.0.3";
-                       var h=d[g]("head")[0] || d[g]("body")[0];
-                       h.appendChild(s);
-                   })(document, window, "fdforms");
-                </script>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      
-    
-      
-      
-
-
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
-        integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
-        crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://unpkg.com/@popperjs/core@2.10.2"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js" integrity="sha512-Ixzuzfxv1EqafeQlTCufWfaC6ful6WFqIz4G+dWvK0beHw0NVJwvCKSgafpy5gwNqKmgUfIBraVwkKI+Cz0SEQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-</body>
-
+        <button
+          class="absolute top-0 bottom-0 left-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+          type="button"
+          data-te-target="#carouselExampleCaptions"
+          data-te-slide="prev"
+        >
+          <span class="inline-block h-8 w-8">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="h-6 w-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 19.5L8.25 12l7.5-7.5"
+              />
+            </svg>
+          </span>
+          <span
+            class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+            >Previous</span
+          >
+        </button>
+        <button
+          class="absolute top-0 bottom-0 right-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+          type="button"
+          data-te-target="#carouselExampleCaptions"
+          data-te-slide="next"
+        >
+          <span class="inline-block h-8 w-8">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="h-6 w-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M8.25 4.5l7.5 7.5-7.5 7.5"
+              />
+            </svg>
+          </span>
+          <span
+            class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+            >Next</span
+          >
+        </button>
+      </div>
+    </section>
+  </body>
 </html>
