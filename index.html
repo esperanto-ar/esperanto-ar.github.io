@@ -21,7 +21,14 @@
         border: solid 1px;
       } */
     </style>
-    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+
+
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
     <title>
       Курсы аргентинского испанского в Буэнос-Айресе | Centro de Idiomas
       «Esperanto»
@@ -121,145 +128,26 @@
     <section id="gallery">
       <h2 class="p-4 pt-12 pb-8 text-center text-2xl font-bold">Наши классы</h2>
 
-      <div
-        id="carouselExampleCaptions"
-        class="relative"
-        data-te-carousel-init
-        data-te-carousel-slide
-      >
-        <div
-          class="absolute right-0 bottom-0 left-0 z-[2] mx-[15%] mb-4 flex list-none justify-center p-0"
-        >
-          <button
-            type="button"
-            data-te-target="#carouselExampleCaptions"
-            data-te-slide-to="0"
-            data-te-carousel-active
-            class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-te-target="#carouselExampleCaptions"
-            data-te-slide-to="1"
-            class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-te-target="#carouselExampleCaptions"
-            data-te-slide-to="2"
-            class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-            aria-label="Slide 3"
-          ></button>
+    	<div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./foto-1.png" alt="Image 3">
+          </div>
+          <div class="swiper-slide">
+            <img src="./foto-2.png" alt="Image 2">
+          </div>
+          <div class="swiper-slide">
+            <img src="./foto-3.png" alt="Image 3">
+          </div>
         </div>
-        <div
-          class="relative w-full overflow-hidden after:clear-both after:block after:content-['']"
-        >
-          <div
-            class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-            data-te-carousel-active
-            data-te-carousel-item
-            style="backface-visibility: hidden"
-          >
-            <div
-              class="relative overflow-hidden bg-cover bg-no-repeat"
-              style="background-position: 50%"
-            >
-              <img src="foto-1.png" class="block w-full" />
-              <div
-                class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-black bg-fixed opacity-20"
-              ></div>
-            </div>
-          </div>
-          <div
-            class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-            data-te-carousel-item
-            style="backface-visibility: hidden"
-          >
-            <div
-              class="relative overflow-hidden bg-cover bg-no-repeat"
-              style="background-position: 50%"
-            >
-              <img src="foto-2.png" class="block w-full" />
-              <div
-                class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-black bg-fixed opacity-20"
-              ></div>
-            </div>
-          </div>
+        <!-- Стрелки навигации -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <!-- Индикаторы слайдов -->
+        <div class="swiper-pagination"></div>
+      </div>  
+      	
 
-          <div
-            class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-            data-te-carousel-item
-            style="backface-visibility: hidden"
-          >
-            <div
-              class="relative overflow-hidden bg-cover bg-no-repeat"
-              style="background-position: 50%"
-            >
-              <img src="foto-3.png" class="block w-full" />
-              <div
-                class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-black bg-fixed opacity-20"
-              ></div>
-            </div>
-          </div>
-        </div>
-        <button
-          class="absolute top-0 bottom-0 left-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
-          type="button"
-          data-te-target="#carouselExampleCaptions"
-          data-te-slide="prev"
-        >
-          <span class="inline-block h-8 w-8">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="h-6 w-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M15.75 19.5L8.25 12l7.5-7.5"
-              />
-            </svg>
-          </span>
-          <span
-            class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
-            >Previous</span
-          >
-        </button>
-        <button
-          class="absolute top-0 bottom-0 right-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
-          type="button"
-          data-te-target="#carouselExampleCaptions"
-          data-te-slide="next"
-        >
-          <span class="inline-block h-8 w-8">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="h-6 w-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M8.25 4.5l7.5 7.5-7.5 7.5"
-              />
-            </svg>
-          </span>
-          <span
-            class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
-            >Next</span
-          >
-        </button>
-      </div>
     </section>
 
     <section id="contacts" class="bg-gray-100 pb-8">
@@ -289,5 +177,25 @@
         <p class="text-gray-600">2004-2023</p>
       </div>
     </footer>
+
+
+  	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<!-- Инициализация Swiper -->
+  <script>
+		var swiper = new Swiper('.swiper-container', {
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+			autoplay: {
+				delay: 2000,
+			},
+		});
+	</script>
+
   </body>
 </html>
