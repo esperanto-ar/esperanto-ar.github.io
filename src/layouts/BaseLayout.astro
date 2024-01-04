@@ -12,8 +12,7 @@ const { pageTitle } = Astro.props;
       rel="stylesheet"
     />
     <title>{pageTitle}</title>
-    <link rel="icon" href="/favicon.png" type="image/x-icon">
-
+    <link rel="icon" href="/favicon.png" type="image/x-icon" />
   </head>
 
   <body class="flex flex-col min-h-screen bg-gray-100 text-gray-700 text-lg">
@@ -32,14 +31,15 @@ const { pageTitle } = Astro.props;
           </div>
 
           <nav
-            class="flex md:flex items-center md:bg-transparent bg-orange-500 p-4 text-white md:text-stone-900 w-full justify-center md:justify-end md:p-8"
+            class="flex md:flex items-center md:bg-transparent bg-orange-400 p-4 text-white md:text-stone-900 w-full justify-center md:justify-end md:p-8"
           >
             <ul class="flex items-center space-x-4 font-bold">
               <li class="inline-block text-center">
-                <a href="/nosotros" class="nav-link">Nosotros</a>
+                <a href="/nosotros" class="hover:underline">Nosotros</a>
               </li>
+              <li class="inline-block text-center">|</li>
               <li class="inline-block text-center">
-                <a href="/contacto" class="nav-link">Contacto</a>
+                <a href="/contacto" class="hover:underline">Contacto</a>
               </li>
             </ul>
           </nav>
@@ -108,14 +108,13 @@ const { pageTitle } = Astro.props;
         </li>
       </ul>
       <ul
-      class="flex flex-wrap justify-center space-x-4 font-bold text-lg px-4 py-2 my-2 bg-gray-200 shadow-sm"
-    >
-    <li >
-      <span class="pr-2"></span><a
-      href="/xrusos"
-      class="hover:underline ">Испанский для русскоязычных</a
-    >
-    </li>
+        class="flex flex-wrap justify-center space-x-4 font-bold text-lg px-4 py-2 my-2 bg-gray-200 shadow-sm"
+      >
+        <li>
+          <span class="pr-2"></span><a href="/xrusos" class="hover:underline"
+            >Испанский для русскоязычных</a
+          >
+        </li>
       </ul>
     </nav>
 
@@ -138,8 +137,15 @@ const { pageTitle } = Astro.props;
     </section>
 
     <!-- Подвал -->
-    <footer class="bg-orange-500 p-4 text-white text-center mt-auto">
-      <p>&copy; 2004-2024 Centro de Idiomas Esperanto</p>
+    <footer class="bg-orange-400 p-4 text-white text-center mt-auto">
+      <p>
+        &copy; 2004-<span id="currentYear"></span> Centro de Idiomas Esperanto
+      </p>
+
+      <script>
+        document.getElementById("currentYear").textContent =
+          new Date().getFullYear();
+      </script>
     </footer>
   </body>
 </html>
