@@ -1,35 +1,47 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-const pageTitle = "Обо мне";
-const happy = true;
+import BaseLayout from '../Layout.astro'
+const pageTitle = 'Обо мне'
+const happy = true
 
-const finished = true;
-const goal = 3;
+const finished = true
+const goal = 3
 const identity = {
-  firstName: "Сара",
-  country: "Канада",
-  occupation: "Технический писатель",
-  hobbies: ["фотография", "наблюдение за птицами", "бейсбол"],
-};
-const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Написание документации"];
-const skillColor = "темно-синий";
-const fontWeight = "жирный";
-const textCase = "верхний регистр";
+  firstName: 'Сара',
+  country: 'Канада',
+  occupation: 'Технический писатель',
+  hobbies: ['фотография', 'наблюдение за птицами', 'бейсбол'],
+}
+const skills = [
+  'HTML',
+  'CSS',
+  'JavaScript',
+  'React',
+  'Astro',
+  'Написание документации',
+]
+const skillColor = 'темно-синий'
+const fontWeight = 'жирный'
+const textCase = 'верхний регистр'
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-
-    <h1>{pageTitle}</h1>
-    <p>Вот несколько фактов обо мне:</p>
-<ul>
-  <li>Меня зовут {identity.firstName}.</li>
-  <li>Я живу в {identity.country} и работаю в качестве {identity.occupation}.</li>
-  {identity.hobbies.length >= 2 &&
-    <li>Два моих увлечения: {identity.hobbies[0]} и {identity.hobbies[1]}</li>
-  }
-</ul>
-<p>Мои навыки:</p>
-<ul>
-  {skills.map((skill) => <li>{skill}</li>)}
-</ul>
+  <h1>{pageTitle}</h1>
+  <p>Вот несколько фактов обо мне:</p>
+  <ul>
+    <li>Меня зовут {identity.firstName}.</li>
+    <li>
+      Я живу в {identity.country} и работаю в качестве {identity.occupation}.
+    </li>
+    {
+      identity.hobbies.length >= 2 && (
+        <li>
+          Два моих увлечения: {identity.hobbies[0]} и {identity.hobbies[1]}
+        </li>
+      )
+    }
+  </ul>
+  <p>Мои навыки:</p>
+  <ul>
+    {skills.map((skill) => <li>{skill}</li>)}
+  </ul>
 </BaseLayout>

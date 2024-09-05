@@ -1,98 +1,14 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-const pageTitle = "Main";
+import BaseLayout from '../Layout.astro'
+import HeroBlock from '../blocks/HeroBlock.astro'
+import AboutBlock from '../blocks/AboutBlock.astro'
+import FeaturesBlock from '../blocks/FeaturesBlock.astro'
+
+const pageTitle = 'Main'
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <div class="bg-white py-12">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="lg:text-center">
-        <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">En Buenos Aires y Online</h2>
-        <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-          Clases de Idiomas
-        </p>
-        <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-          ¡Aprende idiomas de forma divertida y efectiva con nuestros cursos presenciales y online!
-        </p>
-      </div>
-
-      <div class="mt-10">
-        <dl class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
-          <div class="relative">
-            <dt>
-              <div class="absolute flex items-center justify-center h-12 w-12 rounded-full bg-blue-500 text-white">
-                {/* Icono temporal */}
-      
-                <img src="/icons/online.svg" alt="online" class="h-8 w-8">
-
-              </div>
-              <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Cursos a Distancia</p>
-            </dt>
-            <dd class="mt-2 ml-16 text-base text-gray-500">
-              Aprende desde la comodidad de tu hogar con nuestras clases online interactivas.
-            </dd>
-          </div>
-
-          <div class="relative">
-            <dt>
-              <div class="absolute flex items-center justify-center h-12 w-12 rounded-full bg-blue-500 text-white">
-                {/* Icono temporal */}
-                <img src="/icons/materials.svg" alt="materials" class="h-8 w-8">
-              </div>
-              <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Apuntes de Clase y Soporte Tutorial</p>
-            </dt>
-            <dd class="mt-2 ml-16 text-base text-gray-500">
-              Recibe material de estudio complementario y acceso a nuestro equipo de tutores.
-            </dd>
-          </div>
-
-          <div class="relative">
-            <dt>
-              <div class="absolute flex items-center justify-center h-12 w-12 rounded-full bg-blue-500 text-white">
-                {/* Icono temporal */}
-                <img src="/icons/native.svg" alt="native" class="h-8 w-8">
-
-              </div>
-              <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Docentes Nativos</p>
-            </dt>
-            <dd class="mt-2 ml-16 text-base text-gray-500">
-              Aprende con profesores nativos que te guiarán en el camino hacia la fluidez.
-            </dd>
-          </div>
-
-          <div class="relative">
-            <dt>
-              <div class="absolute flex items-center justify-center h-12 w-12 rounded-full bg-blue-500 text-white">
-                {/* Icono temporal */}
-
-                <img src="/icons/relax.svg" alt="relax" class="h-8 w-8">
-
-              </div>
-              <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Ambiente Amigable y Entretenido</p>
-            </dt>
-            <dd class="mt-2 ml-16 text-base text-gray-500">
-              Disfruta de un ambiente de aprendizaje relajado y divertido que te motivará a seguir aprendiendo.
-            </dd>
-          </div>
-        </dl>
-      </div>
-    </div>
-  </div>
-
-  <div class="relative overflow-hidden">
-    <img src="cover.jpg" alt="People learning languages" class="w-full h-96 object-cover">
-    <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent"></div>
-    <div class="absolute inset-0 flex items-center justify-center">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl font-extrabold text-white sm:text-4xl">
-          Fundado en el año 2004
-        </h2>
-        <p class="mt-4 text-lg text-gray-300">
-          El Centro de Idiomas "Esperanto" se ha dedicado durante todo este tiempo a la enseñanza de idiomas extranjeros en un ambiente amigable y entretenido. Todos los profesores de nuestro centro son nativos.
-        </p>
-        <a href="#" class="mt-8 inline-block bg-white border border-transparent rounded-md py-3 px-8 text-base font-medium text-blue-600 hover:bg-blue-50">Más información...</a>
-      </div>
-    </div>
-  </div>
-
+  <HeroBlock />
+  <FeaturesBlock />
+  <AboutBlock />
 </BaseLayout>
