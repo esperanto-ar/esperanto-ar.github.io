@@ -1,1 +1,31 @@
-{}
+{
+  "remote.autoForwardPortsSource": "hybrid",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "git.confirmSync": false,
+  "codeium.enableConfig": {
+    "*": true,
+    "markdown": true,
+    "properties": true,
+    "http": true
+  },
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/.git": true,
+    ".vscode/config": true,
+    "**/__pycache__": true,
+    ".pytest_cache": true
+  },
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true,
+  "editor.minimap.renderCharacters": false,
+  "editor.minimap.enabled": false,
+  "workbench.activityBar.location": "top",
+  "workbench.sideBar.location": "left",
+  "workbench.editor.customLabels.patterns": {
+    "**/main.py": "${dirname} - ${filename}"
+  },
+  "diffEditor.hideUnchangedRegions.enabled": false,
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "cloudcode.duetAI.project": "test-genemi-code-autocomplite"
+}

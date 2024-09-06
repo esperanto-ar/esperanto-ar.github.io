@@ -1,0 +1,21 @@
+services:
+
+  code-server:
+      build: ./.vscode
+      environment:
+        PUID: 1000
+        PGID: 1000
+        TZ: America/Argentina/Buenos_Aires
+        SUDO_PASSWORD: 123
+        DEFAULT_WORKSPACE: /workspace
+      volumes:
+        - ./:/workspace
+        - ./.vscode/keybindings.json:/config/data/User/keybindings.json
+        - ./.vscode/settings.json:/config/data/User/settings.json
+        - ./.vscode/extensions.json:/config/data/User/extensions.json
+        - ~/.ssh:/config/.ssh
+        - ~/.gitconfig:/config/.gitconfig
+        - /var/run/docker.sock:/var/run/docker.sock
+      ports:
+        - 8443:8443
+      privileged: true
