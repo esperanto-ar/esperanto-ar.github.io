@@ -1,15 +1,23 @@
-FROM node:lts-alpine3.17
+# Используем Node.js в качестве базового образа
+FROM node:18-alpine
 
-EXPOSE 3000
-
+# Устанавливаем рабочую директорию в контейнере
 WORKDIR /app
 
-ENV PATH /app/node_modules/.bin:$PATH
+# Копируем файлы package.json и package-lock.json (если есть)
+COPY package*.json ./
 
-COPY *.json ./
-
+# Устанавливаем зависимости
 RUN npm install
 
+# Копируем исходный код приложения
 COPY . .
 
-CMD [ "astro", "dev" ]
+# Собираем приложение
+RUN npm run build
+
+# Открываем порт, который будет использоваться приложением
+EXPOSE 3000
+
+# Запускаем приложение
+CMD ["npm", "run", "dev"]
